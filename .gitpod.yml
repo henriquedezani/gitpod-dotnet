@@ -1,0 +1,17 @@
+image:
+  file: .gitpod.dockerfile
+
+tasks:
+  - before: >
+      source ~/.bashrc
+    init: |
+      echo "Wait for the installation"
+      dotnet --version
+    command: >
+      echo "Ready!"
+ports:
+  - port: 5000
+    onOpen: open-preview
+vscode:
+  extensions:
+    - ms-dotnettools.csharp@1.21.16
